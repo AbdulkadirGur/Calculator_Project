@@ -1,0 +1,11 @@
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\bin\Debug\Calculator_Project.exe.config
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\bin\Debug\Calculator_Project.exe
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\bin\Debug\Calculator_Project.pdb
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\obj\Debug\Calculator_Project.csproj.AssemblyReference.cache
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\obj\Debug\Calculator_Project.csproj.SuggestedBindingRedirects.cache
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\obj\Debug\Calculator_Project.Form1.resources
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\obj\Debug\Calculator_Project.Properties.Resources.resources
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\obj\Debug\Calculator_Project.csproj.GenerateResource.cache
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\obj\Debug\Calculator_Project.csproj.CoreCompileInputs.cache
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\obj\Debug\Calculator_Project.exe
+C:\Harddisk\3.Sinif\Canakkale_Güz\Visual_Programming\Calculator_Project\Calculator_Project\obj\Debug\Calculator_Project.pdb
