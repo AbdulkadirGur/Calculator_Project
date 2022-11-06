@@ -12,20 +12,22 @@ namespace Calculator_Project
 {
     public partial class Form1 : Form
     {
+        string ekran = "0";
         public Form1()
         {
             InitializeComponent();
         }
         public void tus(string x)
         {
-            if (textBox2.Text == "0")
+            if (ekran == "0")
             {
-                textBox2.Text = x;
+               ekran = x;
             }
             else
             {
-                textBox2.Text += x;
+                ekran += x;
             }
+            textBox2.Text = ekran;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -92,23 +94,76 @@ namespace Calculator_Project
 
         private void button10_Click(object sender, EventArgs e)
         {
-            
+            // ','
+            string x =ekran;
+            int flag = x.IndexOf(',');
+            if (flag == -1)
+            {
+                ekran += ',';
+            }
+            textBox2.Text = ekran;
         }
 
         private void button12_Click(object sender, EventArgs e)
-        {
-            string a = textBox2.Text;
+        {   // '+/-'
+            string a = ekran;
             if (a[0] == '-')
             {   // del the -
                 string b = a.Substring(1);
-                textBox2.Text = b;
-
+                ekran = b;
             }
             else if (a[0] != '0')
             {  // add the -
-                textBox2.Text = "-" + textBox2.Text;
+                ekran = "-" + ekran;
 
             }
+            textBox2.Text = ekran;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {   // C 
+                textBox2.Text = "0";
+            textBox1.Text = "";
+            ekran = "0";
+            textBox2.Text = ekran;
+
+        }
+
+        private void islem(string op)
+        {
+            textBox1.Text = textBox1.Text+ " "+ ekran + " " + op;
+            ekran = "0";
+                     
+
+        }
+        private void button13_Click(object sender, EventArgs e)
+        {  // + op
+            islem("+");
+           
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // - op
+            islem("-");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // * op
+            islem("*");
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            // / op
+            islem("/");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            // = op
+            islem("=");
         }
     }
 }
