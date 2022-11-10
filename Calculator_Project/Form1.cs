@@ -13,6 +13,8 @@ namespace Calculator_Project
     public partial class Form1 : Form
     {
         string ekran = "0";
+        double sonuc = 0;
+        string opx = "";
         public Form1()
         {
             InitializeComponent();
@@ -95,6 +97,8 @@ namespace Calculator_Project
         private void button10_Click(object sender, EventArgs e)
         {
             // ','
+            //, tuşu            
+            //ifade içinde , karakteri yoksa
             string x =ekran;
             int flag = x.IndexOf(',');
             if (flag == -1)
@@ -106,6 +110,7 @@ namespace Calculator_Project
 
         private void button12_Click(object sender, EventArgs e)
         {   // '+/-'
+            //soldan ilk karakter - ise, eksi silme
             string a = ekran;
             if (a[0] == '-')
             {   // del the -
@@ -113,7 +118,9 @@ namespace Calculator_Project
                 ekran = b;
             }
             else if (a[0] != '0')
-            {  // add the -
+            {
+                //soldan ilk karakter - değil ise, eksi ekleme
+                // add the -
                 ekran = "-" + ekran;
 
             }
@@ -122,18 +129,50 @@ namespace Calculator_Project
 
         private void button18_Click(object sender, EventArgs e)
         {   // C 
-                textBox2.Text = "0";
+
+            textBox2.Text = "0";
             textBox1.Text = "";
             ekran = "0";
-            textBox2.Text = ekran;
+            sonuc = 0;
+            opx = "";
+            
 
         }
 
         private void islem(string op)
         {
-            textBox1.Text = textBox1.Text+ " "+ ekran + " " + op;
-            ekran = "0";
-                     
+            if(opx != "")
+            {
+                //Daha önce bir operatöre tıklanmış, bu 2.,3.,... ise
+                //bir önceki işlemin sonucu 
+                string s2 = ekran;
+
+                if (opx == "+") sonuc = sonuc + Convert.ToDouble(s2);
+                else if (opx == "-") sonuc = sonuc - Convert.ToDouble(s2);
+                else if (opx == "*") sonuc = sonuc * Convert.ToDouble(s2);
+                else if (opx == "/") sonuc = sonuc / Convert.ToDouble(s2);// 0 a bolme durumu 
+                /// 0 a bölme durumu
+
+                textBox2.Text=sonuc.ToString();               
+            }
+            else
+            {
+                //ilk defa operatöre tıklanıyorsa
+                sonuc = Convert.ToDouble(ekran);
+                  
+            }
+            //5+3--> sonuc=8,  t1=8, s2, ekran =3, opx="+"
+            if (opx == "=")
+            {
+                textBox1.Clear();
+               
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + " " + ekran + " " + op;
+                opx = op;
+                ekran = "0";
+            }   
 
         }
         private void button13_Click(object sender, EventArgs e)
